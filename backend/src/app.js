@@ -1,4 +1,5 @@
 const express = require('express');
+<<<<<<< HEAD
 const mongoose = require('mongoose');
 const dotenv = require('dotenv');
 const cors = require('cors');
@@ -46,3 +47,18 @@ const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
   console.log(`🚀 Server is running on http://localhost:${PORT}`);
 });
+=======
+const connectDb = require('./configs/db.config');
+
+const app = express();
+
+connectDb();
+
+// Basic route
+app.get('/', (req, res) => {
+    res.send('MyFolioHub');
+});
+
+module.exports = app;
+
+>>>>>>> 44b3c2704f49c774161f8bdc169c59ecf02734fc
